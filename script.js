@@ -6,13 +6,13 @@ const countdowns = [
     { date: "2025-02-14", elementId: "my-element3" }  
 ];
 
-// Getting a next valid date of the event (if the event has already passed, move it to next year)
+// Getting a next valid date of the event 
 function getNextValidDate(dateString) {
     const currentDate = new Date();
-    const targetDate = new Date(dateString);
+    let targetDate = new Date(dateString);
 
-    if (targetDate < currentDate) {
-        targetDate.setFullYear(currentDate.getFullYear() + 1);
+    while (targetDate < currentDate) {
+        targetDate.setFullYear(targetDate.getFullYear() + 1);
     }
 
     return targetDate;
