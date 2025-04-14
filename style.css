@@ -41,7 +41,7 @@ body {
 }
 
 .card {
-  background-image: url('Pictures/Custom.jpg');
+  background-image: url('./Pictures/Custom.jpg');
   background-size: cover;
   background-position: center;
   backdrop-filter: blur(10px);
@@ -90,26 +90,26 @@ body {
 }
 
 .christmas {
-  background-image: url('Pictures/Christmas.jpg');
+  background-image: url('./Pictures/Christmas.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .newYear{
-  background-image: url('Pictures/NewYear.jpg');
+  background-image: url('./Pictures/NewYear.jpg');
   background-size: cover;
   background-position: center;
   color: #ffffff;
 }
 
 .valentines{
-  background-image: url('Pictures/Valentines.jpg');
+  background-image: url('./Pictures/Valentines.jpg');
   background-size: cover;
   background-position: center;
   color: #ffffff;
 }
 .halloween {
-  background-image: url('Pictures/Halloween.jpg');
+  background-image: url('./Pictures/Halloween.jpg');
   background-size: cover;
   background-position: center;
   color: #ffffff;
