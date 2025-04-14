@@ -15,6 +15,12 @@ body {
   overflow-x: hidden;
 }
 
+.main-header {
+  padding: 2rem 2rem;
+  background-color:#0a1647b9;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.004);
+}
+
 #title {
   text-align: center;
   margin: 0 auto;
@@ -35,7 +41,7 @@ body {
 }
 
 .card {
-  background-image: url('/Pictures/Custom.jpg');
+  background-image: url('Pictures/Custom.jpg');
   background-size: cover;
   background-position: center;
   backdrop-filter: blur(10px);
@@ -84,26 +90,26 @@ body {
 }
 
 .christmas {
-  background-image: url('/Pictures/Christmas.jpg');
+  background-image: url('Pictures/Christmas.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .newYear{
-  background-image: url('/Pictures/NewYear.jpg');
+  background-image: url('Pictures/NewYear.jpg');
   background-size: cover;
   background-position: center;
   color: #ffffff;
 }
 
 .valentines{
-  background-image: url('/Pictures/Valentines.jpg');
+  background-image: url('Pictures/Valentines.jpg');
   background-size: cover;
   background-position: center;
   color: #ffffff;
 }
 .halloween {
-  background-image: url('/Pictures/Halloween.jpg');
+  background-image: url('Pictures/Halloween.jpg');
   background-size: cover;
   background-position: center;
   color: #ffffff;
