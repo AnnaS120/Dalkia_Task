@@ -1,3 +1,282 @@
 * {
-    font-family: arial;
+  font-family: "Libre Bodoni", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+    
+body {
+  min-height: 100vh;
+  background: linear-gradient(140deg, #e4e7e4, #0a1647);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #ffffff; 
+  overflow-x: hidden;
+}
+
+#title {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(19, 18, 18, 0.932);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #fff;
+  width: 0;
+  line-height: 1.5; 
+  animation: typing 2.5s steps(13, end) forwards, hideCursor 0s 2.5s forwards;
+}
+
+.card {
+  background-image: url('/Pictures/Custom.jpg');
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(10px);
+  border-radius: 0.7rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+  border: 1px solid rgba(16, 15, 15, 0.3); 
+  cursor: grab;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+
+.card-title {
+  font-size: 2.5rem ;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.46)
+}
+
+.card-body {
+  padding: 2.5rem 1rem;
+}
+
+.countdown-digit {
+  background-color: #232323; 
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 25px 0px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 1.5rem;
+  box-shadow: 
+  0 6px 15px rgba(0, 0, 0, 0.2), 
+  0 0 15px 4px #bfbfbb; 
+  letter-spacing: 2px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.countdown-digit:hover {
+  animation: bounce 0.4s ease;
+}
+
+.christmas {
+  background-image: url('/Pictures/Christmas.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.newYear{
+  background-image: url('/Pictures/NewYear.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.valentines{
+  background-image: url('/Pictures/Valentines.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+.halloween {
+  background-image: url('/Pictures/Halloween.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.card .delete-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;}
+  
+.card .delete-btn:hover {
+  transform: scale(1.1);
+}
+  
+
+.countdown-card {
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+  
+.countdown-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 0;
+}
+
+.countdown-card .card-body {
+  position: relative;
+  z-index: 1;
+}
+
+.add-countdown-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1.5rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  min-height: 190px; 
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+  
+.add-countdown-card:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-3px);
+}
+  
+#add-event-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #393939;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+  
+#add-event-btn:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.card.animate-in {
+  animation: fadeInUp 0.5s ease-out both;
+}
+
+/* Event name input field */
+.card-body input[type="text"] {
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-body input[type="text"]:focus {
+  border-color: #393939;
+  box-shadow: 0 0 10px rgba(106, 172, 203, 0.4);
+  outline: none;
+}
+
+/* Date picker field */
+.card-body input[type="date"] {
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-body input[type="date"]:focus {
+  border-color: #393939;
+  box-shadow: 0 0 10px rgba(106, 172, 203, 0.4);
+  outline: none;
+}
+
+/* Save button styling */
+.card-body .save-btn {
+  background-color: #393939;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card-body .save-btn:hover {
+  background-color: #58a982;
+}
+
+.drag-handle {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+}
+
+
+
+    
+/* Keyframes */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 9ch; }
+}
+/* Hide the cursor after typing is done */
+@keyframes hideCursor {
+  to { border-right: none; }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Responsive*/
+@media (max-width: 576px) {
+  .card-body input[type="text"] {
+    width: 90%;
+  }
+  .card-body input[type="date"] {
+    width: 90%;
+  }
+}

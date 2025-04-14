@@ -1,0 +1,174 @@
+* {
+    font-family: Arial, Helvetica, sans-serif
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #5a6776, #ff7b74);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #ffffff; 
+    overflow-x: hidden;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    
+    
+  }
+  
+  .display-5 {
+    margin-top: 2rem;
+  }
+
+  #title {
+    font-size: 3.7rem;
+    color: #ffffff;
+    text-shadow: #393939 2px;
+    
+  }
+
+  .card-title {
+    font-size: 3rem ;
+  }
+
+
+  .countdown-digit {
+    background-color: #393939; 
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px 30px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 1.5rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    min-width: 100px;
+    text-align: center;
+  }
+
+  #add-event-btn {
+    font-size: 2.7rem; 
+    width: 70px; 
+    height: 70px; 
+    line-height: 0
+  }
+
+  .card.animate-in {
+    animation: fadeInUp 0.5s ease-out;
+  }
+  
+
+  .card.fade-out {
+    animation: fadeOut 0.4s ease-out;
+    pointer-events: none;
+  }
+
+  .card .delete-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .card .delete-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .card-body {
+    position: relative;
+    padding: 2rem 1rem;
+  }
+
+
+  .countdown-card {
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  /* Optional: overlay to improve text readability */
+  .countdown-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 0;
+  }
+  
+  .countdown-card .card-body {
+    position: relative;
+    z-index: 1;
+  }
+  
+
+  .add-countdown-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 1.5rem;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    min-height: 190px; /* Match other cards visually */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .add-countdown-card:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-3px);
+  }
+  
+  #add-event-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #393939;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  #add-event-btn:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+  }
